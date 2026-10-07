@@ -29,20 +29,40 @@ a {
 }
 
 .navbar {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  min-height: 45px;
   background: rgba(255, 255, 255, .8);
   backdrop-filter: blur(12px);
   box-shadow: 0 1px 0 var(--line)
 }
 
+.navbar-brand {
+  padding: 0 !important;
+}
+
 .brand-logo {
-  width: 170px;
-  height: auto
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+}
+
+.brand-text {
+  font-weight: 900;
+  font-size: 1.3rem;
+  color: var(--orange);
+  margin-left: 10px;
+  letter-spacing: -0.02em;
 }
 
 .navbar .nav-link {
   font-weight: 650;
   color: #433832 !important;
-  padding: .7rem .85rem !important
+  padding: .2rem .85rem !important
+}
+
+.navbar .btn {
+  padding: 0.4rem 1.25rem !important;
 }
 
 .navbar .nav-link:hover,
@@ -56,13 +76,13 @@ a {
   color: #fff;
   font-weight: 750;
   border-radius: 999px;
-  padding: .8rem 1.3rem
+  padding: .8rem 1.3rem;
 }
 
 .btn-brand:hover {
   background: var(--orange-dark);
   border-color: var(--orange-dark);
-  color: #fff
+  color: #fff;
 }
 
 .btn-outline-brand {
@@ -70,12 +90,12 @@ a {
   color: var(--orange);
   font-weight: 750;
   border-radius: 999px;
-  padding: .72rem 1.25rem
+  padding: .72rem 1.25rem;
 }
 
 .btn-outline-brand:hover {
   background: var(--orange);
-  color: #fff
+  color: #fff;
 }
 
 .hero {
@@ -84,20 +104,20 @@ a {
   align-items: center;
   background: radial-gradient(circle at 90% 15%, #ffe1bd 0, #fff8ef 38%, #fff 72%);
   padding: 7rem 0 4rem;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .hero h1 {
   font-size: clamp(2.7rem, 6vw, 5.2rem);
   line-height: .98;
   font-weight: 900;
-  letter-spacing: -.055em
+  letter-spacing: -.055em;
 }
 
 .hero .lead {
   font-size: 1.12rem;
   color: var(--muted);
-  max-width: 610px
+  max-width: 610px;
 }
 
 .kicker {
@@ -112,7 +132,7 @@ a {
   font-size: .85rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: .08em
+  letter-spacing: .08em;
 }
 
 .hero-art {
