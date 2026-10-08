@@ -5,9 +5,9 @@ Isi project:
 - about.html      : About + lokasi
 - menu.html       : 12 menu + harga
 - order.html      : Order + Product Showcase/Gallery + WhatsApp
-- contact.html    : Contact + feedback rating 1-5
+- feedback.html   : Feedback + rating 1-5
 - css/style.css   : Custom CSS
-- images/         : logo, ilustrasi produk, dan foto lokasi asli
+- images/         : logo, menu, qris, dan foto lokasi asli
 
 Cara menjalankan:
 1. Ekstrak folder.

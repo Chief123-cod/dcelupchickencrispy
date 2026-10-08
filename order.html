@@ -13,40 +13,48 @@
     rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-xl fixed-top">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="D'CELUP Home">
-          <img src="images/logo/image.png" alt="D'CELUP Chicken Crispy" class="brand-logo"><span
-            class="brand-text">LapakTiga</span>
+          <img src="images/logo/image.png" alt="D'CELUP Chicken Crispy" class="brand-logo">
+          <span class="brand-text">D'CELUP</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-          aria-controls="mainNav" aria-expanded="false" aria-label="Buka menu">
+                                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav"
+          aria-controls="offcanvasNav" aria-label="Buka menu">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+          <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title d-flex align-items-center" id="offcanvasNavLabel">
+              <span class="brand-text fs-5">Menu Navigasi</span>
+            </h5>
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Tutup"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-auto align-items-xl-center">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
             <li class="nav-item"><a class="nav-link active" href="order.html">Order</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a>
+            <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a>
             </li>
-            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-              <a class="btn btn-brand"
-                href="https://api.whatsapp.com/send/?phone=6281233300582&text=Halo+Mba+Fauziah%2C+saya+tertarik+dengan+info+kemitraan+D%27Celup+Chicken+Crispy&type=phone_number&app_absent=0"
+            <li class="nav-item ms-xl-2 mt-2 mt-xl-0">
+              <a class="btn wa-btn px-3 py-2"
+                href="https://wa.me/6285345034011?text=Halo D'CELUP, saya ingin memesan.%0ANama Pembeli: %0AMenu: %0AJumlah: %0AAmbil Jam Berapa: %0AKeterangan: "
                 target="_blank" rel="noopener">
-                Gabung Komunitas
+                <i class="bi bi-whatsapp me-1"></i> WhatsApp
               </a>
             </li>
           </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -62,13 +70,15 @@
       </div>
     </section>
 
+    <!-- Section: Info Pemesanan -->
     <section class="section">
       <div class="container">
-        <div class="row g-5 align-items-start">
-          <div class="col-lg-5">
-            <div class="order-panel">
+        <div class="row g-4 g-lg-5">
+          <!-- Kolom 1: Pesan & WhatsApp -->
+          <div class="col-lg-4">
+            <div class="order-panel h-100">
               <span class="badge text-bg-warning rounded-pill">Penting</span>
-              <h2 class="h2 fw-bold mt-3">Pesan 3 jam sebelum membeli</h2>
+              <h2 class="h4 fw-bold mt-3">Pesan 3 jam sebelum membeli</h2>
               <p class="muted">Hubungi owner melalui WhatsApp untuk memastikan pesanan dan waktu pengambilan.</p>
               <div class="d-flex align-items-center gap-3 border-top border-secondary pt-4 mt-4">
                 <div class="icon-box bg-success text-white"><i class="bi bi-whatsapp"></i></div>
@@ -81,114 +91,37 @@
                 target="_blank" rel="noopener" class="btn wa-btn w-100 mt-4 py-3"><i class="bi bi-whatsapp me-2"></i>
                 Chat Owner Sekarang</a>
             </div>
-            <div class="card-clean p-4 mt-4">
-              <h3 class="h5 fw-bold">Format pesan</h3>
-              <pre class="small mb-0" style="white-space:pre-wrap;color:#5d4f48">Nama Pembeli: Daniel
+          </div>
+          <!-- Kolom 2: Format Pesan -->
+          <div class="col-lg-4">
+            <div class="card-clean p-4 h-100">
+              <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-chat-text fs-4 text-primary me-2"></i>
+                <h3 class="h5 fw-bold mb-0">Format Pesan</h3>
+              </div>
+              <div class="bg-light p-3 rounded-3 border border-light-subtle">
+                <pre class="small mb-0" style="white-space:pre-wrap;color:#5d4f48; font-family: inherit;">Nama Pembeli: Daniel
 Menu: Ayam Original
 Jumlah: 1
 Ambil Jam Berapa: 12 Siang
 Keterangan: Pilih Bagian Paha</pre>
+              </div>
+              <p class="small muted mt-3 mb-0"><i class="bi bi-info-circle me-1"></i>Salin format di atas, isi datanya,
+                lalu kirim via WhatsApp.</p>
             </div>
           </div>
-          <div class="col-lg-7">
-            <h2 class="section-title mb-4">Product Showcase</h2>
-            <p class="section-subtitle">Galeri produk sekaligus shortcut untuk memesan menu pilihan.</p>
-            <div class="row g-4">
-              <div class="col-6 col-md-4 col-lg-3">
-                <a href="https://wa.me/6285345034011?text=Halo%20D%27CELUP%2C%20saya%20ingin%20memesan%20Ayam%20Original"
-                  target="_blank" rel="noopener" class="d-block">
-                  <img src="images/ayam-original.svg" alt="Ayam Original" class="gallery-img">
-                  <div class="d-flex justify-content-between mt-2"><span class="fw-bold small">Ayam Original</span><span
-                      class="price fs-6">10K</span></div>
-                </a>
+          <!-- Kolom 3: QRIS -->
+          <div class="col-lg-4">
+            <div class="card-clean p-4 h-100 text-center">
+              <div class="d-flex justify-content-center mb-2">
+                <i class="bi bi-qr-code-scan fs-1 text-primary"></i>
               </div>
-              <div class="col-6 col-md-4 col-lg-3">
-                <a href="https://wa.me/6285345034011?text=Halo%20D%27CELUP%2C%20saya%20ingin%20memesan%20Ayam%20Saus%20Keju"
-                  target="_blank" rel="noopener" class="d-block">
-                  <img src="images/ayam-keju.svg" alt="Ayam Saus Keju" class="gallery-img">
-                  <div class="d-flex justify-content-between mt-2"><span class="fw-bold small">Ayam Saus
-                      Keju</span><span class="price fs-6">13K</span></div>
-                </a>
-              </div>
-              <div class="col-6 col-md-4 col-lg-3">
-                <a href="https://wa.me/6285345034011?text=Halo%20D%27CELUP%2C%20saya%20ingin%20memesan%20Ayam%20Saus%20Geprek"
-                  target="_blank" rel="noopener" class="d-block">
-                  <img src="images/ayam-geprek.svg" alt="Ayam Saus Geprek" class="gallery-img">
-                  <div class="d-flex justify-content-between mt-2"><span class="fw-bold small">Ayam Saus
-                      Geprek</span><span class="price fs-6">13K</span></div>
-                </a>
-              </div>
-              <div class="col-6 col-md-4 col-lg-3">
-                <a href="https://wa.me/6285345034011?text=Halo%20D%27CELUP%2C%20saya%20ingin%20memesan%20Ayam%20Saus%20Teriyaki"
-                  target="_blank" rel="noopener" class="d-block">
-                  <img src="images/ayam-teriyaki.svg" alt="Ayam Saus Teriyaki" class="gallery-img">
-                  <div class="d-flex justify-content-between mt-2"><span class="fw-bold small">Ayam Saus
-                      Teriyaki</span><span class="price fs-6">13K</span></div>
-                </a>
-              </div>
-              <div class="col-6 col-md-4 col-lg-3">
-                <a href="https://wa.me/6285345034011?text=Halo%20D%27CELUP%2C%20saya%20ingin%20memesan%20Ayam%20Saus%20Barbeque"
-                  target="_blank" rel="noopener" class="d-block">
-                  <img src="images/ayam-bbq.svg" alt="Ayam Saus Barbeque" class="gallery-img">
-                  <div class="d-flex justify-content-between mt-2"><span class="fw-bold small">Ayam Saus
-                      Barbeque</span><span class="price fs-6">13K</span></div>
-                </a>
-              </div>
-              <div class="col-6 col-md-4 col-lg-3">
-                <a href="https://wa.me/6285345034011?text=Halo%20D%27CELUP%2C%20saya%20ingin%20memesan%20Ayam%20Saus%20Lada%20Hitam"
-                  target="_blank" rel="noopener" class="d-block">
-                  <img src="images/ayam-lada-hitam.svg" alt="Ayam Saus Lada Hitam" class="gallery-img">
-                  <div class="d-flex justify-content-between mt-2"><span class="fw-bold small">Ayam Saus Lada
-                      Hitam</span><span class="price fs-6">13K</span></div>
-                </a>
-              </div>
-              <div class="col-6 col-md-4 col-lg-3">
-                <a href="https://wa.me/6285345034011?text=Halo%20D%27CELUP%2C%20saya%20ingin%20memesan%20Nasi%20Ayam%20Original"
-                  target="_blank" rel="noopener" class="d-block">
-                  <img src="images/nasi-original.svg" alt="Nasi Ayam Original" class="gallery-img">
-                  <div class="d-flex justify-content-between mt-2"><span class="fw-bold small">Nasi Ayam
-                      Original</span><span class="price fs-6">14K</span></div>
-                </a>
-              </div>
-              <div class="col-6 col-md-4 col-lg-3">
-                <a href="https://wa.me/6285345034011?text=Halo%20D%27CELUP%2C%20saya%20ingin%20memesan%20Nasi%20Ayam%20Saus%20Keju"
-                  target="_blank" rel="noopener" class="d-block">
-                  <img src="images/nasi-keju.svg" alt="Nasi Ayam Saus Keju" class="gallery-img">
-                  <div class="d-flex justify-content-between mt-2"><span class="fw-bold small">Nasi Ayam Saus
-                      Keju</span><span class="price fs-6">17K</span></div>
-                </a>
-              </div>
-              <div class="col-6 col-md-4 col-lg-3">
-                <a href="https://wa.me/6285345034011?text=Halo%20D%27CELUP%2C%20saya%20ingin%20memesan%20Nasi%20Ayam%20Saus%20Geprek"
-                  target="_blank" rel="noopener" class="d-block">
-                  <img src="images/nasi-geprek.svg" alt="Nasi Ayam Saus Geprek" class="gallery-img">
-                  <div class="d-flex justify-content-between mt-2"><span class="fw-bold small">Nasi Ayam Saus
-                      Geprek</span><span class="price fs-6">17K</span></div>
-                </a>
-              </div>
-              <div class="col-6 col-md-4 col-lg-3">
-                <a href="https://wa.me/6285345034011?text=Halo%20D%27CELUP%2C%20saya%20ingin%20memesan%20Nasi%20Ayam%20Saus%20Teriyaki"
-                  target="_blank" rel="noopener" class="d-block">
-                  <img src="images/nasi-teriyaki.svg" alt="Nasi Ayam Saus Teriyaki" class="gallery-img">
-                  <div class="d-flex justify-content-between mt-2"><span class="fw-bold small">Nasi Ayam Saus
-                      Teriyaki</span><span class="price fs-6">17K</span></div>
-                </a>
-              </div>
-              <div class="col-6 col-md-4 col-lg-3">
-                <a href="https://wa.me/6285345034011?text=Halo%20D%27CELUP%2C%20saya%20ingin%20memesan%20Nasi%20Ayam%20Saus%20Barbeque"
-                  target="_blank" rel="noopener" class="d-block">
-                  <img src="images/nasi-bbq.svg" alt="Nasi Ayam Saus Barbeque" class="gallery-img">
-                  <div class="d-flex justify-content-between mt-2"><span class="fw-bold small">Nasi Ayam Saus
-                      Barbeque</span><span class="price fs-6">17K</span></div>
-                </a>
-              </div>
-              <div class="col-6 col-md-4 col-lg-3">
-                <a href="https://wa.me/6285345034011?text=Halo%20D%27CELUP%2C%20saya%20ingin%20memesan%20Nasi%20Ayam%20Saus%20Lada%20Hitam"
-                  target="_blank" rel="noopener" class="d-block">
-                  <img src="images/nasi-lada-hitam.svg" alt="Nasi Ayam Saus Lada Hitam" class="gallery-img">
-                  <div class="d-flex justify-content-between mt-2"><span class="fw-bold small">Nasi Ayam Saus Lada
-                      Hitam</span><span class="price fs-6">17K</span></div>
-                </a>
+              <h3 class="h5 fw-bold">Pembayaran QRIS</h3>
+              <p class="small-note mb-3">Scan kode QRIS D'CELUP di bawah ini untuk kemudahan pembayaran pesanan Anda.
+              </p>
+              <div class="bg-white p-3 rounded-4 shadow-sm border d-inline-block">
+                <img src="images/qris/qris.jpg" alt="Kode QRIS D'CELUP" class="img-fluid rounded"
+                  style="max-width: 200px;">
               </div>
             </div>
           </div>
@@ -205,22 +138,26 @@ Keterangan: Pilih Bagian Paha</pre>
           <div class="col-md-4">
             <article class="card-clean feature-card text-center">
               <div class="icon-box mx-auto">1</div>
-              <h3 class="h5 fw-bold mt-4">Pilih Menu</h3>
-              <p class="small-note mb-0">Pilih salah satu menu dari product showcase di atas.</p>
+              <h3 class="h5 fw-bold mt-4">Pesan via WhatsApp</h3>
+              <p class="small-note mb-0">Chat owner dengan format pesanan, tentukan jam pengambilan hari ini. Pesan
+                minimal <strong>3 jam sebelumnya</strong>.</p>
             </article>
           </div>
           <div class="col-md-4">
             <article class="card-clean feature-card text-center">
               <div class="icon-box mx-auto">2</div>
-              <h3 class="h5 fw-bold mt-4">Kirim Detail</h3>
-              <p class="small-note mb-0">Gunakan format nama, menu, jumlah, jam ambil, dan keterangan.</p>
+              <h3 class="h5 fw-bold mt-4">Bayar & Konfirmasi</h3>
+              <p class="small-note mb-0">Transfer pembayaran lewat QRIS, lalu kirim bukti transfer ke owner dan tunggu
+                konfirmasi pesanan.</p>
             </article>
           </div>
           <div class="col-md-4">
             <article class="card-clean feature-card text-center">
               <div class="icon-box mx-auto">3</div>
-              <h3 class="h5 fw-bold mt-4">Konfirmasi</h3>
-              <p class="small-note mb-0">Tunggu balasan owner untuk konfirmasi pesanan.</p>
+              <h3 class="h5 fw-bold mt-4">Ambil di Lokasi</h3>
+              <p class="small-note mb-0">Datang ke lokasi sesuai jam yang sudah ditentukan. Pesanan harus diambil
+                <strong>di hari yang sama</strong>.
+              </p>
             </article>
           </div>
         </div>
@@ -232,25 +169,54 @@ Keterangan: Pilih Bagian Paha</pre>
   <footer class="footer">
     <div class="container">
       <div class="row g-4">
-        <div class="col-lg-4">
+        <!-- Kolom 1: Brand & Deskripsi -->
+        <div class="col-lg-3">
           <img src="images/logo/image.png" alt="D'CELUP Chicken Crispy" class="brand-logo bg-white rounded-3 p-1 mb-3">
-          <p class="mb-0">Pelopor Kemitraan Fried Chicken Celup Saus Signature Nomor 1 di Indonesia. Di bawah naungan PT Master Kuliner Indonesia.</p>
+          <p class="mb-0 small text-secondary">Pelopor Kemitraan Fried Chicken Celup Saus Signature Nomor 1 di
+            Indonesia. Di bawah naungan PT Master Kuliner Indonesia.</p>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <h6 class="footer-title">Ikuti Kami</h6>
-          <div class="d-flex flex-column">
-            <a href="https://www.instagram.com/dcelupchickencrispy.id/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><i class="bi bi-instagram fs-4"></i> Instagram</a>
-            <a href="https://www.tiktok.com/@dcelupchickencrispy.id" target="_blank" rel="noopener" class="social-link" aria-label="TikTok"><i class="bi bi-tiktok fs-4"></i> TikTok</a>
-            <a href="https://www.facebook.com/p/Bisnis-Dcelup-Chicken-Crispy-61556764181419/" target="_blank" rel="noopener" class="social-link border-0" aria-label="Facebook"><i class="bi bi-facebook fs-4"></i> Facebook</a>
+
+        <!-- Kolom 2: Peta Situs (Sitemap) -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <h6 class="footer-title">Navigasi Cepat</h6>
+          <div class="d-flex flex-column gap-2 small">
+            <a href="index.html" class="text-decoration-none text-secondary hover-text-primary">Home</a>
+            <a href="about.html" class="text-decoration-none text-secondary hover-text-primary">About</a>
+            <a href="menu.html" class="text-decoration-none text-secondary hover-text-primary">Menu</a>
+            <a href="order.html" class="text-decoration-none text-secondary hover-text-primary">Order</a>
+            <a href="feedback.html" class="text-decoration-none text-secondary hover-text-primary">Feedback</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+
+        <!-- Kolom 3: Ikuti Kami -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <h6 class="footer-title">Ikuti Kami</h6>
+          <div class="d-flex flex-column gap-2">
+            <a href="https://www.instagram.com/dcelupchickencrispy.id/" target="_blank" rel="noopener"
+              class="text-decoration-none text-secondary hover-text-primary d-flex align-items-center gap-2">
+              <i class="bi bi-instagram fs-5"></i> Instagram
+            </a>
+            <a href="https://www.tiktok.com/@dcelupchickencrispy.id" target="_blank" rel="noopener"
+              class="text-decoration-none text-secondary hover-text-primary d-flex align-items-center gap-2">
+              <i class="bi bi-tiktok fs-5"></i> TikTok
+            </a>
+            <a href="https://www.facebook.com/p/Bisnis-Dcelup-Chicken-Crispy-61556764181419/" target="_blank"
+              rel="noopener"
+              class="text-decoration-none text-secondary hover-text-primary d-flex align-items-center gap-2">
+              <i class="bi bi-facebook fs-5"></i> Facebook
+            </a>
+          </div>
+        </div>
+
+        <!-- Kolom 4: Kantor Pusat -->
+        <div class="col-md-4 col-lg-3">
           <h6 class="footer-title">Kantor Pusat MKI</h6>
-          <p class="mb-0">PT Master Kuliner Indonesia<br>Jl. Moh. Kahfi 1 No. 31, RT.5/RW.5,<br>Ciganjur, Kec. Jagakarsa, Kota<br>Jakarta Selatan, DKI Jakarta 12620</p>
+          <p class="mb-0 small text-secondary">PT Master Kuliner Indonesia<br>Jl. Moh. Kahfi 1 No. 31,
+            RT.5/RW.5,<br>Ciganjur, Kec. Jagakarsa, Kota<br>Jakarta Selatan, DKI Jakarta 12620</p>
         </div>
       </div>
-      <hr class="border-secondary my-4">
-      <div class="d-flex flex-column flex-md-row justify-content-center gap-2 small">
+      <hr class="border-secondary my-4 opacity-25">
+      <div class="text-center small text-secondary">
         <span>&copy; 2026 D'Celup Chicken Crispy by PT Master Kuliner Indonesia. All rights reserved.</span>
       </div>
     </div>
@@ -259,3 +225,7 @@ Keterangan: Pilih Bagian Paha</pre>
 </body>
 
 </html>
+
+
+
+
